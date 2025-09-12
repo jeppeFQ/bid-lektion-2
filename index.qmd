@@ -27,10 +27,20 @@ format:
           </style>
 ---
 
-## Dagens program
+## Dagens program {background-image="resources/samfund.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.5"}
 
+- dd   
+- ccc   
 
-## Det digitale samfund 
+---
+
+![](resources/turk.jpg){fig-align="center" width=50%}
+
+:::{.incremental}
+- [LaMDA](https://arstechnica.com/tech-policy/2022/07/google-fires-engineer-who-claimed-lamda-chatbot-is-a-sentient-person/) og maskiner med bevidsthed?
+:::
+
+## Det digitale samfund {background-image="resources/samfund.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
 
 > Det, at flere og flere aspekter af vores liv og hverdag digitaliseres, stiller ikke kun store krav til de underliggende systemer, men rejser også mange fundamentale spørgsmål; såvel tekniske som etiske.
 
@@ -97,7 +107,7 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
     * Det meste af fremgangen indenfor AI er takket være **brute force** og *enorme mængde data*, snarer end vi har formået at putte mere "intellegens" ind i modeller. 
 :::
 
-## Skyggesiderne af det digital samfund 
+## Skyggesiderne af det digital samfund {background-image="resources/bad-ai.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.2"}
 
 <br>
 
@@ -105,15 +115,15 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
 
 - Datasikkerhed
 - Privatliv 
-- Rettigheder 
+- Rettigheder (og ejerskab)
 
 **De "nye":**
 
-- Diskrimination og gennemsigtighed [*Rettigheder*]
-- Klima
+- Diskrimination og gennemsigtighed
+- (Klima)
 - (Ubegrundet/overdreven optimisme?)
 
-## (Data)sikkerhed
+## (Data)sikkerhed {background-image="resources/eu.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
 
 :::{.incremental}
 * **GDPR**: for lidt og for meget?
@@ -125,7 +135,7 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
 
 <span class="timer" data-time="300"></span>
 
-## Privatliv 
+## Privatliv (1) {background-image="resources/privat.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
 
 :::{.incremental}
 - Stort set alt hvad vi gør med digitale værktøjer (*computer, telefon, tv, SoMe, kort, kreditkort, ...*) **generer data**. 
@@ -135,3 +145,84 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
 :::
 
 <span class="timer" data-time="300"></span>
+
+## Privatliv (2) 
+
+![](resources/peppespizza.jpeg){fig-align="center" width=50%}
+
+:::{.incremental}
+- **Anonymous Video Analytics**: Køn, Aldersgruppe, Attention time, Smile.
+- Tesla's overvågning af gadebilledet. Hvorfor er det mere acceptabelt? 
+:::
+
+## Privatliv (3)
+
+:::{.incremental}
+- **Federated learning**: Google opfandt en måde at trænie modeller på vores mobiler, uden hjemsendelse af persondata; kun parametre. 
+- **Formålsglidning**: bedste eksempel er NSA 
+- Techgiganterne der ved meget om os er primært Amerikanske; resten er primært Kinesiske.
+:::
+
+<span class="timer" data-time="300"></span>
+
+## Rettigheder og ejerskab {background-image="resources/antiai.png" background-size="100%" background-position="center" background-repeat="no-repeat" background-opacity="0.3"}
+
+:::{.incremental}
+- Hvad ejer vi egentlig, når vi først har lagt det på nettet?
+- OpenAI 4. november 2022: *you own the generations you create with DALL-E* ([pkt. 5](https://help.openai.com/en/articles/6704941-dall-e-api-faq))
+  - **AI *er* kreative i en snæver defination af begrebet**. Men modeller er trænet på "dit" arbejde. 
+- Vi kan ikke lave plagiat kontrol på en AI model, men ...    
+  - **Bør vi vandmærke AI modeller?**   
+:::
+
+<span class="timer" data-time="300"></span>
+
+## Rettigheder 
+
+**Correctional Offender Management Profiling for Alternative Sanctions** ([COMPAS](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing))
+
+> *It assesses not just risk but also nearly two dozen so-called “criminogenic needs” that relate to the major theories of criminality, including “criminal personality,” “social isolation,” “substance abuse” and “residence/stability.” Defendants are ranked low, medium or high risk in each category.*
+
+:::{.incremental}
+::: {style="font-size: 0.9em;"}
+- AI modeller er (typisk) udvikling af folk, der ikke er eksperter i **substansfeltet**. De er eksperter i AI og ML. 
+- Neurale netværk er for kompliceret til at vi i dag, som mennesker kan se, hvad det er maskinen "ser". 
+  - **Subsymbolsk viden**: Dataen mister sin betydning for mennesker.
+    - **Grænsetilfælde**: Det lange hale problem.  
+    - En ting er at et system virker, men hvis vi ikke ved *hvorfor* det virker, bør vi så tage det i brug .
+:::
+:::
+
+<span class="timer" data-time="300"></span>
+
+## Diskrimination og gennemsigtighed (1)
+
+![](resources/pic-discrimination.jpg){fig-align="center" width=50%}
+
+:::{.incremental}
+- Det er mennesker, der har adgang til hvilke kategorier en model har adgang til. (Sandsynligvis har afro- og/eller amerikaner, ikke været tilgængelig).
+:::
+
+## Diskrimination og gennemsigtighed (2)
+
+[Amazon Scraps Secret AI Recruiting Engine that Showed Biases Against Women](https://www.ml.cmu.edu/news/news-archive/2016-2020/2018/october/amazon-scraps-secret-artificial-intelligence-recruiting-engine-that-showed-biases-against-women.html)
+
+:::{.incremental}
+  - Endte som en *mande-detector*: Vi henter data fra en verden hvor hvide mænd har haft en priviligeret position. 
+  - Er modellen sexistisk, hvis den kun har "kendt" en (data)verden, hvor strukturel sexisme eksisterer?
+  - Data kan ikke have bias. Data *er* bare. 
+  - **Gennemsigtighed eller regulering?**
+:::
+
+<span class="timer" data-time="300"></span>
+
+## Diskrimination og gennemsigtighed (3) {background-image="resources/kant.jpg" background-size="100%" background-position="center" background-repeat="no-repeat" background-opacity="0.3"}
+
+*Scrolling, autonomi og selvforstærkende mekanismer.*
+
+:::{.incremental}
+- Danner vi ønsker, eller bliver vi nudget til bestemte ønsker? 
+- **Anbefalingssystemer**: er det tilpasning eller manipulation?
+- Deep fakes (billede og lyd). Google vi ikke frigive **AudioLM**.
+    * Lyd og billede kan ikke skelnes fra originaler. 
+::: 

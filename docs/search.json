@@ -4,7 +4,7 @@
     "href": "index.html#dagens-program",
     "title": "(D)en digital verden – utopi eller dystopi?",
     "section": "Dagens program",
-    "text": "Dagens program"
+    "text": "Dagens program\n\ndd\n\nccc"
   },
   {
     "objectID": "index.html#det-digitale-samfund",
@@ -39,7 +39,7 @@
     "href": "index.html#skyggesiderne-af-det-digital-samfund",
     "title": "(D)en digital verden – utopi eller dystopi?",
     "section": "Skyggesiderne af det digital samfund",
-    "text": "Skyggesiderne af det digital samfund\n\nDe klassiske:\n\nDatasikkerhed\nPrivatliv\nRettigheder\n\nDe “nye”:\n\nDiskrimination og gennemsigtighed [Rettigheder]\nKlima\n(Ubegrundet/overdreven optimisme?)"
+    "text": "Skyggesiderne af det digital samfund\n\nDe klassiske:\n\nDatasikkerhed\nPrivatliv\nRettigheder (og ejerskab)\n\nDe “nye”:\n\nDiskrimination og gennemsigtighed\n(Klima)\n(Ubegrundet/overdreven optimisme?)"
   },
   {
     "objectID": "index.html#datasikkerhed",
@@ -49,10 +49,59 @@
     "text": "(Data)sikkerhed\n\nGDPR: for lidt og for meget?\n\nForskningsarbejde, der ikke må anvendes i praksis.\nProduction af personfølsom data (2018 studie på Facebook data)\nAntag at de store techvirksomheder ved midst lige så meget om dig, som du selv gør!\nGiver mere regulering mening, når vi ikke ved hvad der bliver muligt i morgen?"
   },
   {
-    "objectID": "index.html#privatliv",
-    "href": "index.html#privatliv",
+    "objectID": "index.html#privatliv-1",
+    "href": "index.html#privatliv-1",
     "title": "(D)en digital verden – utopi eller dystopi?",
-    "section": "Privatliv",
-    "text": "Privatliv\n\nStort set alt hvad vi gør med digitale værktøjer (computer, telefon, tv, SoMe, kort, kreditkort, …) generer data.\n\nI praksis er denne data ikke længere anonym. Når der er nok data, er det “nemt” at identificere personer.\nThe privacy paradox.\nDet meste data er ikke for os, det er om os."
+    "section": "Privatliv (1)",
+    "text": "Privatliv (1)\n\nStort set alt hvad vi gør med digitale værktøjer (computer, telefon, tv, SoMe, kort, kreditkort, …) generer data.\n\nI praksis er denne data ikke længere anonym. Når der er nok data, er det “nemt” at identificere personer.\nThe privacy paradox.\nDet meste data er ikke for os, det er om os."
+  },
+  {
+    "objectID": "index.html#privatliv-2",
+    "href": "index.html#privatliv-2",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Privatliv (2)",
+    "text": "Privatliv (2)\n\n\nAnonymous Video Analytics: Køn, Aldersgruppe, Attention time, Smile.\nTesla’s overvågning af gadebilledet. Hvorfor er det mere acceptabelt?"
+  },
+  {
+    "objectID": "index.html#privatliv-3",
+    "href": "index.html#privatliv-3",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Privatliv (3)",
+    "text": "Privatliv (3)\n\nFederated learning: Google opfandt en måde at trænie modeller på vores mobiler, uden hjemsendelse af persondata; kun parametre.\nFormålsglidning: bedste eksempel er NSA\nTechgiganterne der ved meget om os er primært Amerikanske; resten er primært Kinesiske."
+  },
+  {
+    "objectID": "index.html#rettigheder-og-ejerskab",
+    "href": "index.html#rettigheder-og-ejerskab",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Rettigheder og ejerskab",
+    "text": "Rettigheder og ejerskab\n\nHvad ejer vi egentlig, når vi først har lagt det på nettet?\nOpenAI 4. november 2022: you own the generations you create with DALL-E (pkt. 5)\n\nAI er kreative i en snæver defination af begrebet. Men modeller er trænet på “dit” arbejde.\n\nVi kan ikke lave plagiat kontrol på en AI model, men …\n\nBør vi vandmærke AI modeller?"
+  },
+  {
+    "objectID": "index.html#rettigheder",
+    "href": "index.html#rettigheder",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Rettigheder",
+    "text": "Rettigheder\nCorrectional Offender Management Profiling for Alternative Sanctions (COMPAS)\n\nIt assesses not just risk but also nearly two dozen so-called “criminogenic needs” that relate to the major theories of criminality, including “criminal personality,” “social isolation,” “substance abuse” and “residence/stability.” Defendants are ranked low, medium or high risk in each category.\n\n\n\nAI modeller er (typisk) udvikling af folk, der ikke er eksperter i substansfeltet. De er eksperter i AI og ML.\nNeurale netværk er for kompliceret til at vi i dag, som mennesker kan se, hvad det er maskinen “ser”.\n\nSubsymbolsk viden: Dataen mister sin betydning for mennesker.\n\nGrænsetilfælde: Det lange hale problem.\n\nEn ting er at et system virker, men hvis vi ikke ved hvorfor det virker, bør vi så tage det i brug ."
+  },
+  {
+    "objectID": "index.html#diskrimination-og-gennemsigtighed-1",
+    "href": "index.html#diskrimination-og-gennemsigtighed-1",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Diskrimination og gennemsigtighed (1)",
+    "text": "Diskrimination og gennemsigtighed (1)\n\n\nDet er mennesker, der har adgang til hvilke kategorier en model har adgang til. (Sandsynligvis har afro- og/eller amerikaner, ikke været tilgængelig)."
+  },
+  {
+    "objectID": "index.html#diskrimination-og-gennemsigtighed-2",
+    "href": "index.html#diskrimination-og-gennemsigtighed-2",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Diskrimination og gennemsigtighed (2)",
+    "text": "Diskrimination og gennemsigtighed (2)\nAmazon Scraps Secret AI Recruiting Engine that Showed Biases Against Women\n\nEndte som en mande-detector: Vi henter data fra en verden hvor hvide mænd har haft en priviligeret position.\nEr modellen sexistisk, hvis den kun har “kendt” en (data)verden, hvor strukturel sexisme eksisterer?\nData kan ikke have bias. Data er bare.\nGennemsigtighed eller regulering?"
+  },
+  {
+    "objectID": "index.html#diskrimination-og-gennemsigtighed-3",
+    "href": "index.html#diskrimination-og-gennemsigtighed-3",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Diskrimination og gennemsigtighed (3)",
+    "text": "Diskrimination og gennemsigtighed (3)\nScrolling, autonomi og selvforstærkende mekanismer.\n\nDanner vi ønsker, eller bliver vi nudget til bestemte ønsker?\nAnbefalingssystemer: er det tilpasning eller manipulation?\nDeep fakes (billede og lyd). Google vi ikke frigive AudioLM.\n\nLyd og billede kan ikke skelnes fra originaler."
   }
 ]
