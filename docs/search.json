@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html#dagens-program",
+    "href": "index.html#dagens-program",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Dagens program",
+    "text": "Dagens program"
+  },
+  {
+    "objectID": "index.html#det-digitale-samfund",
+    "href": "index.html#det-digitale-samfund",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Det digitale samfund",
+    "text": "Det digitale samfund\n\nDet, at flere og flere aspekter af vores liv og hverdag digitaliseres, stiller ikke kun store krav til de underliggende systemer, men rejser også mange fundamentale spørgsmål; såvel tekniske som etiske."
+  },
+  {
+    "objectID": "index.html#dataindsamling-og-tabsfunktionen-den-menneskelige-vinkel",
+    "href": "index.html#dataindsamling-og-tabsfunktionen-den-menneskelige-vinkel",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Dataindsamling og tabsfunktionen: den menneskelige vinkel",
+    "text": "Dataindsamling og tabsfunktionen: den menneskelige vinkel\nHver gang AI bruges til at træffe en beslutning (alt fra klassifikation til et skak-træk) ligger der menneskebestemte afvejninger bag.\n\nDatatype og -omfang: Ægte data eller ideel data (the unicorn)?\nDefinerede opgaver: Maskiner besejrer os, fordi vi beder dem om det. Det er ikke en skjult motivation (Luda, Tay: “thinking about you”).\nTabsfunktionen: målet vi bruger til at bestemme, hvor langt maskinen er fra at løse problemet. En grundlæggende menneskebestemt komponent."
+  },
+  {
+    "objectID": "index.html#dataindsamling-og-tabsfunktionen-den-menneskelige-vinkel-1",
+    "href": "index.html#dataindsamling-og-tabsfunktionen-den-menneskelige-vinkel-1",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Dataindsamling og tabsfunktionen: den menneskelige vinkel",
+    "text": "Dataindsamling og tabsfunktionen: den menneskelige vinkel\nHver gang AI bruges til at træffe en beslutning (alt fra klassifikation til et skak-træk) ligger der menneskebestemte afvejninger bag.\n\n“Du har en befolkning, hvor 0,5 procent får en alvorlig sygdom, og træner en model til at identificere dem. Modellen opnår hurtigt en høj træfsikkerhed på 99,5 procent, men er ikke i stand til at identificere en eneste af de syge. Hvad er der sket?” (fra Inga Strümke)"
+  },
+  {
+    "objectID": "index.html#dataindsamling-og-tabsfunktionen-den-menneskelige-vinkel-2",
+    "href": "index.html#dataindsamling-og-tabsfunktionen-den-menneskelige-vinkel-2",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Dataindsamling og tabsfunktionen: den menneskelige vinkel",
+    "text": "Dataindsamling og tabsfunktionen: den menneskelige vinkel\nHver gang AI bruges til at træffe en beslutning (alt fra klassifikation til et skak-træk) ligger der menneskebestemte afvejninger bag.\n\nUdviklere bestemmer hvornår en model er færdig.\n\nalt fra simpel ML og deep learning handler grundlæggende “bare” om kontinuerlig tilpasning af parametre indtil fejlen er så lille som muligt.\nUniversel approximation: tilnærmelse af den sande funktion og fordeling.\n\n… der er dog gerne mellem millioner og milliarder af parametre og træningen af modeller anvender en mængde energi, der svarer til mange menneskeliv.\n\nDet meste af fremgangen indenfor AI er takket være brute force og enorme mængde data, snarer end vi har formået at putte mere “intellegens” ind i modeller."
+  }
+]
