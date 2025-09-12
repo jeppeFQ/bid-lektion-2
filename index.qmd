@@ -96,3 +96,42 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
     * **Universel approximation**: tilnærmelse af den sande funktion og fordeling.  
     * Det meste af fremgangen indenfor AI er takket være **brute force** og *enorme mængde data*, snarer end vi har formået at putte mere "intellegens" ind i modeller. 
 :::
+
+## Skyggesiderne af det digital samfund 
+
+<br>
+
+**De klassiske:**
+
+- Datasikkerhed
+- Privatliv 
+- Rettigheder 
+
+**De "nye":**
+
+- Diskrimination og gennemsigtighed [*Rettigheder*]
+- Klima
+- (Ubegrundet/overdreven optimisme?)
+
+## (Data)sikkerhed
+
+:::{.incremental}
+* **GDPR**: for lidt og for meget?
+    * Forskningsarbejde, der ikke må anvendes i praksis. 
+    * Production af personfølsom data ([2018 studie på Facebook data](https://doi.org/10.1073/pnas.1802331115))
+    * Antag at de store techvirksomheder ved *midst* lige så meget om dig, som du selv gør!
+    * Giver mere regulering mening, når vi ikke ved hvad der bliver muligt i morgen?
+::: 
+
+<span class="timer" data-time="300"></span>
+
+## Privatliv 
+
+:::{.incremental}
+- Stort set alt hvad vi gør med digitale værktøjer (*computer, telefon, tv, SoMe, kort, kreditkort, ...*) **generer data**. 
+  - I praksis er denne data ikke længere anonym. Når der er nok data, er det "nemt" at identificere personer. 
+  - **The privacy paradox**. 
+  - Det meste data er ikke *for* os, det er *om* os. 
+:::
+
+<span class="timer" data-time="300"></span>

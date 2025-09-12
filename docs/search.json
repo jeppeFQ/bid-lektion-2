@@ -32,6 +32,27 @@
     "href": "index.html#dataindsamling-og-tabsfunktionen-den-menneskelige-vinkel-2",
     "title": "(D)en digital verden – utopi eller dystopi?",
     "section": "Dataindsamling og tabsfunktionen: den menneskelige vinkel",
-    "text": "Dataindsamling og tabsfunktionen: den menneskelige vinkel\nHver gang AI bruges til at træffe en beslutning (alt fra klassifikation til et skak-træk) ligger der menneskebestemte afvejninger bag.\n\nUdviklere bestemmer hvornår en model er færdig.\n\nalt fra simpel ML og deep learning handler grundlæggende “bare” om kontinuerlig tilpasning af parametre indtil fejlen er så lille som muligt.\nUniversel approximation: tilnærmelse af den sande funktion og fordeling.\n\n… der er dog gerne mellem millioner og milliarder af parametre og træningen af modeller anvender en mængde energi, der svarer til mange menneskeliv.\n\nDet meste af fremgangen indenfor AI er takket være brute force og enorme mængde data, snarer end vi har formået at putte mere “intellegens” ind i modeller."
+    "text": "Dataindsamling og tabsfunktionen: den menneskelige vinkel\nHver gang AI bruges til at træffe en beslutning (alt fra klassifikation til et skak-træk) ligger der menneskebestemte afvejninger bag.\n\nUdviklere bestemmer hvornår en model er færdig.\n\nalt fra simpel ML og deep learning handler grundlæggende “bare” om kontinuerlig tilpasning af parametre indtil fejlen er så lille som muligt.\nUniversel approximation: tilnærmelse af den sande funktion og fordeling.\n\nDet meste af fremgangen indenfor AI er takket være brute force og enorme mængde data, snarer end vi har formået at putte mere “intellegens” ind i modeller."
+  },
+  {
+    "objectID": "index.html#skyggesiderne-af-det-digital-samfund",
+    "href": "index.html#skyggesiderne-af-det-digital-samfund",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Skyggesiderne af det digital samfund",
+    "text": "Skyggesiderne af det digital samfund\n\nDe klassiske:\n\nDatasikkerhed\nPrivatliv\nRettigheder\n\nDe “nye”:\n\nDiskrimination og gennemsigtighed [Rettigheder]\nKlima\n(Ubegrundet/overdreven optimisme?)"
+  },
+  {
+    "objectID": "index.html#datasikkerhed",
+    "href": "index.html#datasikkerhed",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "(Data)sikkerhed",
+    "text": "(Data)sikkerhed\n\nGDPR: for lidt og for meget?\n\nForskningsarbejde, der ikke må anvendes i praksis.\nProduction af personfølsom data (2018 studie på Facebook data)\nAntag at de store techvirksomheder ved midst lige så meget om dig, som du selv gør!\nGiver mere regulering mening, når vi ikke ved hvad der bliver muligt i morgen?"
+  },
+  {
+    "objectID": "index.html#privatliv",
+    "href": "index.html#privatliv",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Privatliv",
+    "text": "Privatliv\n\nStort set alt hvad vi gør med digitale værktøjer (computer, telefon, tv, SoMe, kort, kreditkort, …) generer data.\n\nI praksis er denne data ikke længere anonym. Når der er nok data, er det “nemt” at identificere personer.\nThe privacy paradox.\nDet meste data er ikke for os, det er om os."
   }
 ]
