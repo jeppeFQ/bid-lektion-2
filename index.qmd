@@ -177,7 +177,7 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
 
 <span class="timer" data-time="300"></span>
 
-## Rettigheder 
+## Rettigheder {background-image="resources/crime.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
 
 **Correctional Offender Management Profiling for Alternative Sanctions** ([COMPAS](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing))
 
@@ -203,7 +203,7 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
 - Det er mennesker, der har adgang til hvilke kategorier en model har adgang til. (Sandsynligvis har afro- og/eller amerikaner, ikke været tilgængelig).
 :::
 
-## Diskrimination og gennemsigtighed (2)
+## Diskrimination og gennemsigtighed (2) {background-image="resources/dis.png" background-size="70%" background-position="center" background-repeat="no-repeat" background-opacity="0.15"}
 
 [Amazon Scraps Secret AI Recruiting Engine that Showed Biases Against Women](https://www.ml.cmu.edu/news/news-archive/2016-2020/2018/october/amazon-scraps-secret-artificial-intelligence-recruiting-engine-that-showed-biases-against-women.html)
 
@@ -226,3 +226,36 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
 - Deep fakes (billede og lyd). Google vi ikke frigive **AudioLM**.
     * Lyd og billede kan ikke skelnes fra originaler. 
 ::: 
+
+## Hvad er vi villige til at acceptere i et digitalt samfund? 
+
+:::{.incremental}
+
+1. Har vi tænkt over hvad vi vil og ikke vil være med til?
+
+2. Opvejet fordele og ulemper ...
+    * Kan vi overhovedet tage stilling til disse spørgsmål på forhånd eller er vi nødt til at diskutere det løbende?
+
+3. Hvem beslutter hvad vi vil og ikke vil? Og hvad er deres motivation for at beslutte som de gør?
+    * ...Befolkningens ve og vel?   
+    * ...Personlig fortjeneste?    
+    * ...Magt?    
+
+4. Hvad er alternativet?
+    * Kan vi sige fra, hvad ville der ske og hvordan gør vi?    
+
+:::
+
+Det vi kan sige er, at vi altid vil være på bagkant af teknologien. Vi skal derfor kunne forholde os kritisk til teknologi med kort varsel-
+
+I den ideelle verden:
+
+:::{.incremental}
+
+1. ... er der gennemsigtighed omkring beslutningsprocesser og aktørers roller
+2. ... er der plads til demokratisk proces
+3. ... er det bl.a. jer og jeres fagfæller, mere end nogen anden der skal være med til at finde svarene ...
+
+:::
+
+# Grupperdannelse og præsentation af mini-projekter
