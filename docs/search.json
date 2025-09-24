@@ -4,7 +4,7 @@
     "href": "index.html#dagens-program",
     "title": "(D)en digital verden – utopi eller dystopi?",
     "section": "Dagens program",
-    "text": "Dagens program\n\ndd\n\nccc"
+    "text": "Dagens program\n\nForelæsning\n\nIntroduktion til workshops og mini-projekterne"
   },
   {
     "objectID": "index.html#det-digitale-samfund",
@@ -60,7 +60,7 @@
     "href": "index.html#privatliv-2",
     "title": "(D)en digital verden – utopi eller dystopi?",
     "section": "Privatliv (2)",
-    "text": "Privatliv (2)\n\n\nAnonymous Video Analytics: Køn, Aldersgruppe, Attention time, Smile.\nTesla’s overvågning af gadebilledet. Hvorfor er det mere acceptabelt?"
+    "text": "Privatliv (2)"
   },
   {
     "objectID": "index.html#privatliv-3",
@@ -74,7 +74,7 @@
     "href": "index.html#rettigheder-og-ejerskab",
     "title": "(D)en digital verden – utopi eller dystopi?",
     "section": "Rettigheder og ejerskab",
-    "text": "Rettigheder og ejerskab\n\nHvad ejer vi egentlig, når vi først har lagt det på nettet?\nOpenAI 4. november 2022: you own the generations you create with DALL-E (pkt. 5)\n\nAI er kreative i en snæver defination af begrebet. Men modeller er trænet på “dit” arbejde.\n\nVi kan ikke lave plagiat kontrol på en AI model, men …\n\nBør vi vandmærke AI modeller?"
+    "text": "Rettigheder og ejerskab\n\nHvad ejer vi egentlig, når vi først har lagt det på nettet?\nHvad vil det sige at noget er “kreativt”?\nOpenAI 4. november 2022: you own the generations you create with DALL-E (pkt. 5)\n\nAI er kreative i en snæver defination af begrebet. Men modeller er trænet på “dit” arbejde.\n\nVi kan ikke lave plagiat kontrol på en AI model, men …\n\nBør vi vandmærke AI modeller?"
   },
   {
     "objectID": "index.html#rettigheder",
@@ -105,10 +105,24 @@
     "text": "Diskrimination og gennemsigtighed (3)\nScrolling, autonomi og selvforstærkende mekanismer.\n\nDanner vi ønsker, eller bliver vi nudget til bestemte ønsker?\nAnbefalingssystemer: er det tilpasning eller manipulation?\nDeep fakes (billede og lyd). Google vi ikke frigive AudioLM.\n\nLyd og billede kan ikke skelnes fra originaler."
   },
   {
+    "objectID": "index.html#overdreven-optimisme",
+    "href": "index.html#overdreven-optimisme",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Overdreven optimisme?",
+    "text": "Overdreven optimisme?\n\n\nLaMDA og maskiner med bevidsthed?"
+  },
+  {
     "objectID": "index.html#hvad-er-vi-villige-til-at-acceptere-i-et-digitalt-samfund",
     "href": "index.html#hvad-er-vi-villige-til-at-acceptere-i-et-digitalt-samfund",
     "title": "(D)en digital verden – utopi eller dystopi?",
     "section": "Hvad er vi villige til at acceptere i et digitalt samfund?",
     "text": "Hvad er vi villige til at acceptere i et digitalt samfund?\n\nHar vi tænkt over hvad vi vil og ikke vil være med til?\nOpvejet fordele og ulemper …\n\nKan vi overhovedet tage stilling til disse spørgsmål på forhånd eller er vi nødt til at diskutere det løbende?\n\nHvem beslutter hvad vi vil og ikke vil? Og hvad er deres motivation for at beslutte som de gør?\n\n…Befolkningens ve og vel?\n\n…Personlig fortjeneste?\n\n…Magt?\n\nHvad er alternativet?\n\nKan vi sige fra, hvad ville der ske og hvordan gør vi?\n\n\nDet vi kan sige er, at vi altid vil være på bagkant af teknologien. Vi skal derfor kunne forholde os kritisk til teknologi med kort varsel-\nI den ideelle verden:\n\n… er der gennemsigtighed omkring beslutningsprocesser og aktørers roller\n… er der plads til demokratisk proces\n… er det bl.a. jer og jeres fagfæller, mere end nogen anden der skal være med til at finde svarene …"
+  },
+  {
+    "objectID": "index.html#mini-projektet",
+    "href": "index.html#mini-projektet",
+    "title": "(D)en digital verden – utopi eller dystopi?",
+    "section": "Mini-projektet",
+    "text": "Mini-projektet\n“Benspænd”\n\nI skal til sidst “sælge” jeres produkt og det skal derfor være et positivt og optimistisk pitch, der fokusere på, hvorfor de problemstillinger vi har diskuteret i dag ikke er et problem i jeres produkt.\n\nPædagogisk tilgang\n\n\nI lære med en anden case Python-principper, som i skal oversætte til jeres mini-projekt\nFælles grundstruktur for alle projekter: Alle projekterne kan opbygges med disse fælles komponenter.\n\nUndervisningscase: Fremmøderegistrering\nBorgerhenvendelsessystem\nVentelistehåndtering til sundhedsvæsenet\nAffaldshåndteringssystem\nTilskudsberegner\n\nQua vores akive brug af AI i undervisningen kan i til de sidste workshops selvstændigt udvide jeres systemer baseret på jeres interesse."
   }
 ]

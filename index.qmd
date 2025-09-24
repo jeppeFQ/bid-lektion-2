@@ -27,18 +27,10 @@ format:
           </style>
 ---
 
-## Dagens program {background-image="resources/samfund.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.5"}
+## Dagens program {background-image="resources/samfund.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.3"}
 
-- dd   
-- ccc   
-
----
-
-![](resources/turk.jpg){fig-align="center" width=50%}
-
-:::{.incremental}
-- [LaMDA](https://arstechnica.com/tech-policy/2022/07/google-fires-engineer-who-claimed-lamda-chatbot-is-a-sentient-person/) og maskiner med bevidsthed?
-:::
+- Forelæsning  
+- Introduktion til workshops og mini-projekterne
 
 ## Det digitale samfund {background-image="resources/samfund.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
 
@@ -148,7 +140,12 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
 
 ## Privatliv (2) 
 
-![](resources/peppespizza.jpeg){fig-align="center" width=50%}
+![](resources/peppespizza2.jpg){fig-align="center" width=10%}
+
+---
+
+![](resources/peppespizza 2.jpeg){fig-align="center" width=50%}
+
 
 :::{.incremental}
 - **Anonymous Video Analytics**: Køn, Aldersgruppe, Attention time, Smile.
@@ -169,6 +166,7 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
 
 :::{.incremental}
 - Hvad ejer vi egentlig, når vi først har lagt det på nettet?
+- Hvad vil det sige at noget er "kreativt"?
 - OpenAI 4. november 2022: *you own the generations you create with DALL-E* ([pkt. 5](https://help.openai.com/en/articles/6704941-dall-e-api-faq))
   - **AI *er* kreative i en snæver defination af begrebet**. Men modeller er trænet på "dit" arbejde. 
 - Vi kan ikke lave plagiat kontrol på en AI model, men ...    
@@ -227,6 +225,16 @@ Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til
     * Lyd og billede kan ikke skelnes fra originaler. 
 ::: 
 
+
+## Overdreven optimisme?
+
+![](resources/turk.jpg){fig-align="center" width=50%}
+
+:::{.incremental}
+- [LaMDA](https://arstechnica.com/tech-policy/2022/07/google-fires-engineer-who-claimed-lamda-chatbot-is-a-sentient-person/) og maskiner med bevidsthed?
+:::
+
+
 ## Hvad er vi villige til at acceptere i et digitalt samfund? 
 
 :::{.incremental}
@@ -259,3 +267,29 @@ I den ideelle verden:
 :::
 
 # Grupperdannelse og præsentation af mini-projekter
+
+## Mini-projektet 
+
+*"Benspænd"*
+
+- I skal til sidst "sælge" jeres produkt og det skal derfor være et **positivt** og **optimistisk** pitch, der fokusere på, hvorfor de problemstillinger vi har diskuteret i dag **ikke** er et problem i jeres produkt. 
+
+*Pædagogisk tilgang*
+
+::: {.incremental}
+::: {style="font-size: 0.8em;"}
+- I lære med en anden case Python-principper, som i skal oversætte til jeres mini-projekt
+- Fælles grundstruktur for alle projekter: Alle projekterne kan opbygges med disse fælles komponenter. 
+  - **Undervisningscase**: *Fremmøderegistrering*
+  - Borgerhenvendelsessystem
+  - Ventelistehåndtering til sundhedsvæsenet
+  - Affaldshåndteringssystem
+  - Tilskudsberegner
+- Qua vores akive brug af AI i undervisningen kan i til de sidste workshops selvstændigt udvide jeres systemer baseret på jeres interesse. 
+
+:::
+:::
+
+
+
+
