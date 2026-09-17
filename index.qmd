@@ -70,9 +70,7 @@ Den kan gemme tal, sammenligne værdier, hoppe rundt i koden og gentage sig selv
 
 <br>
 
-::: {.fragment}
 Den gætter ikke. Den spørger ikke, hvad du mente. Den gør præcis det, der står.
-:::
 
 ## (3) Præcision er nøglen
 
@@ -151,14 +149,15 @@ Python regner gerne noget ud uden at fortælle jer det. Vil I se resultatet, ska
 
 ```{pyodide}
 #| autorun: false
-2 + 2                  # der sker noget, men I ser det ikke
+2 + 2         # der sker noget, men I ser det ikke
 
-print(2 + 2)           # nu ser I det
+print(2 + 2)  # nu ser I det
 
-print("Salg:", 4700, "kr.")            # flere ting, adskilt af komma
+print("Salg:", 4700, "kr.") # flere ting, adskilt af komma
 
 navn = "Ida"
-print(f"Hej {navn}")   # f-streng: variablen sættes ind i teksten
+print(f"Hej {navn}")   
+# f-streng: variablen sættes ind i teksten
 ```
 
 :::
