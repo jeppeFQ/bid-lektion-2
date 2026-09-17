@@ -1,295 +1,604 @@
 ---
-title: "(D)en digital verden – utopi eller dystopi?"
-subtitle: ""
+title: "Lektion 2"
+subtitle: "Intro til Python"
 author: "Jeppe Fjeldgaard Qvist"
 date: today
+engine: knitr
 format: 
-  revealjs:
+  live-revealjs:
+    css:
+      - resources/kode-layout.css
     include-after-body: "resources/timer.html"
     navigation-mode: linear
     slide-number: c
     show-slide-number: print
-    embed-resources: true
-    self-contained-math: true
     smaller: true
     scrollable: true
     theme: default
-    include-in-header: 
-      - text: |
-          <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-          <style>
-          .reveal {
-            font-family: "Libre Baskerville", serif !important;
-          }
-          .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-            font-family: "Libre Baskerville", serif !important;
-          }
-          </style>
+pyodide:
+  packages:
+    - matplotlib
 ---
 
-## Dagens program {background-image="resources/samfund.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.3"}
+<!--- quarto add r-wasm/quarto-live -----> 
+<!--- 
+mkdir -p .qmd-pause && mv *.qmd .qmd-pause/ && \
+  quarto add r-wasm/quarto-live; \
+  mv .qmd-pause/* . && rmdir .qmd-pause
+----->
 
-- Forelæsning  
-- Introduktion til workshops og mini-projekterne
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-## Det digitale samfund {background-image="resources/samfund.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
+## Dagens program
 
-> Det, at flere og flere aspekter af vores liv og hverdag digitaliseres, stiller ikke kun store krav til de underliggende systemer, men rejser også mange fundamentale spørgsmål; såvel tekniske som etiske.
+::: {.incremental}
 
----
+1. **Det centrale om Python fra sidste gang** 
 
-![](resources/pic-accident.jpg){fig-align="center" width=50%}
+2. **Sådan taler I med Python**: filen, terminalen og `print()`
 
----
+3. **Fundamentale koncepter**: variable, typer, funktioner, metoder, lister, betingelser og loops/lækker
 
-![](resources/pic-accident.jpg){fig-align="center" width=50%}
+4. **Fejl og fejlbeskeder**
 
-Et **klassificeringsproblem** (*falsk positiv*).
+5. **Øvelser**: I koder selv
 
----
-
-![](resources/pic-accident.jpg){fig-align="center" width=50%}
-
-Et **klassificeringsproblem** (*falsk positiv*).
-
-> Hvem bærer skylden: Maskinen eller Rafaela, der var "andenpilot"?
-
----
-
-![](resources/pic-accident.jpg){fig-align="center" width=50%}
-
-Et **klassificeringsproblem** (*falsk positiv*).
-
-> Al data, der ligger til grund for maskines klassificerings-evner bygger på data som mennesker har haft ansvaret for. Maskiner forholder sig ikke til andet end tal. 
-
----
-
-![](resources/pic-accident.jpg){fig-align="center" width=50%}
-
-Et **klassificeringsproblem** (*falsk positiv*).
-
-> Derfor kan maskiner ikke være sexistiske eller racistiske. Men der eksisterer (stadig) systematisk sexisme og racisme og disse forhold vil være afspejlet i den data vi træner modeller på. 
-
-## *Dataindsamling* og *tabsfunktionen*: den menneskelige vinkel
-
-Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til et **skak-træk**) ligger der menneskebestemte afvejninger bag.
-
-:::{.incremental}
-* *Datatype og -omfang*: Ægte data eller ideel data (the unicorn)? 
-* *Definerede opgaver*: Maskiner besejrer os, fordi vi beder dem om det. Det er ikke en skjult *motivation* (Luda, Tay: "thinking about you"). 
-* *Tabsfunktionen*: målet vi bruger til at bestemme, hvor langt maskinen er fra at løse problemet. En grundlæggende menneskebestemt komponent. 
 :::
-
-## *Dataindsamling* og *tabsfunktionen*: den menneskelige vinkel
-
-Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til et **skak-træk**) ligger der menneskebestemte afvejninger bag.
-
-> *"Du har en befolkning, hvor 0,5 procent får en alvorlig sygdom, og træner en model til at identificere dem. Modellen opnår hurtigt en høj træfsikkerhed på 99,5 procent, men er ikke i stand til at identificere en eneste af de syge. Hvad er der sket?"* (fra Inga Strümke)
-
-<span class="timer" data-time="120"></span>
-
-## *Dataindsamling* og *tabsfunktionen*: den menneskelige vinkel
-
-Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til et **skak-træk**) ligger der menneskebestemte afvejninger bag.
-
-:::{.incremental}
-* Udviklere bestemmer hvornår en model er færdig. 
-    * alt fra simpel ML og *deep learning* handler grundlæggende "bare" om kontinuerlig tilpasning af parametre indtil fejlen er så lille som muligt. 
-    * **Universel approximation**: tilnærmelse af den sande funktion og fordeling.  
-    * Det meste af fremgangen indenfor AI er takket være **brute force** og *enorme mængde data*, snarer end vi har formået at putte mere "intellegens" ind i modeller. 
-:::
-
-## Skyggesiderne af det digital samfund {background-image="resources/bad-ai.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.2"}
 
 <br>
 
-**De klassiske:**
+# Fire ting fra sidste gang
 
-- Datasikkerhed
-- Privatliv 
-- Rettigheder (og ejerskab)
+## (1) Alt er tal
 
-**De "nye":**
+Tekst er tal. Billeder er tal. Lyd er tal. Et spillebræt er tal.
 
-- Diskrimination og gennemsigtighed
-- (Klima)
-- (Ubegrundet/overdreven optimisme?)
+::: {.kode-split}
 
-## (Data)sikkerhed {background-image="resources/eu.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
+```{pyodide}
+#| autorun: false
+print(ord("A"))                      # bogstavet A er tallet 65
+print(chr(65))                       # og den anden vej
 
-:::{.incremental}
-* **GDPR**: for lidt og for meget?
-    * Forskningsarbejde, der ikke må anvendes i praksis. 
-    * Production af personfølsom data ([2018 studie på Facebook data](https://doi.org/10.1073/pnas.1802331115))
-    * Antag at de store techvirksomheder ved *midst* lige så meget om dig, som du selv gør!
-    * Giver mere regulering mening, når vi ikke ved hvad der bliver muligt i morgen?
-::: 
+print(list("Hej".encode("utf-8")))   # hele ordet som bytes
+print(list("Håb".encode("utf-8")))   # å fylder to
+```
 
-<span class="timer" data-time="300"></span>
-
-## Privatliv (1) {background-image="resources/privat.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
-
-:::{.incremental}
-- Stort set alt hvad vi gør med digitale værktøjer (*computer, telefon, tv, SoMe, kort, kreditkort, ...*) **generer data**. 
-  - I praksis er denne data ikke længere anonym. Når der er nok data, er det "nemt" at identificere personer. 
-  - **The privacy paradox**. 
-  - Det meste data er ikke *for* os, det er *om* os. 
 :::
 
-<span class="timer" data-time="300"></span>
+::: {.aside}
+Det er den egenskab, alt andet hviler på: når alting er tal, kan alting behandles med den samme maskine.
+:::
 
-## Privatliv (2) 
+## (2) Maskinen er "dum", hurtig og pålidelig
 
-![](resources/peppespizza2.jpg){fig-align="center" width=10%}
+Den kan gemme tal, sammenligne værdier, hoppe rundt i koden og gentage sig selv. Det er alt. Men den gør det milliarder af gange i sekundet uden at blive træt og uden at lave fejl.
+
+<br>
+
+::: {.fragment}
+Den gætter ikke. Den spørger ikke, hvad du mente. Den gør præcis det, der står.
+:::
+
+## (3) Præcision er nøglen
+
+> "Kan du hente en kop kaffe?"
+
+Vi forstår implicit: **gå ud i køkkenet, tag en kop, hæld kaffe i koppen, kom tilbage.**
+
+<br>
+
+Maskinen forstår ingenting implicit. Alt skal stå der.
+
+Det er derfor, I skriver `total = 0` før loopet i kommer til at se til øvelsen. 
+
+## (4) "En regel bliver til et program"
+
+Sidste gang så I en kommunal tilskudsregel som Python, med et sagsbehandlingsprogram ved siden af. 
+
+<br>
+
+I dag prøver I selv at skrive sådanne regeler.
+
+
+## Fra tanke til handling i fire niveauer
+
+::: {style="font-size: 0.9em;"}
+
+**Niveau 1: menneskelig tanke**  
+"Jeg vil finde gennemsnittet af mine salgstal"
+
+**Niveau 2: algoritmisk tænkning**  
+"Læg alle tallene sammen, divider med antallet"
+
+**Niveau 3: kode**  
+`gennemsnit = sum(tal) / len(tal)`
+
+**Niveau 4: maskinsprog**  
+`10110000 01100001`
+
+:::
+
+<br>
+
+Python-fortolkeren klarer springet fra niveau 3 til 4. **Springet fra 1 til 2 er jeres arbejde** ... og det er det svære.
+
+# Sådan taler I med Python
+
+## To steder at køre kode i dag
+
+:::: {.columns}
+::: {.column width="50%"}
+#### En fil på jeres maskine
+
+I skriver i en editor, gemmer, og kører i terminalen:
+
+```bash
+python3 mit-program.py
+```
+
+Programmet er en fil, der kan gemmes, deles og køres igen.
+:::
+
+::: {.column width="50%"}
+#### "Notebooks"
+
+Cellerne som her på slidesene
+
+Godt til at prøve en ting af eller dataanalyse. Mindre egnet til at "bygge" noget.
+:::
+::::
+
+## `print()`: maskinen siger ikke noget af sig selv
+
+Python regner gerne noget ud uden at fortælle jer det. Vil I se resultatet, skal I bede om det.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+2 + 2                  # der sker noget, men I ser det ikke
+
+print(2 + 2)           # nu ser I det
+
+print("Salg:", 4700, "kr.")            # flere ting, adskilt af komma
+
+navn = "Ida"
+print(f"Hej {navn}")   # f-streng: variablen sættes ind i teksten
+```
+
+:::
+
+::: {.aside}
+Kør cellen, og slet så `print` på linje 3. Hvad sker der med resten?
+:::
+
+## Kommentarer
+
+Alt efter `#` bliver ignoreret af Python. Det står der til mennesker.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+# Grænsen er sat i § N, stk. x. Ændres den, skal sagsbehandlerne varsles.
+GRAENSE = 300000
+
+pris = 249 * 3   # tre stk.
+print(pris)
+```
+
+:::
+
+Skriv **hvorfor**, ikke **hvad**. At tallet kommer fra § N, stk. x. kan ingen se.
+
+# Byggestenene
+
+## Variable
+
+En variabel er et navn, der peger på en værdi. Lighedstegnet er ikke en påstand om, at de to sider er lige store. Det er en **ordre**: regn højresiden ud, og læg resultatet i navnet til venstre.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+pris = 100
+moms = pris * 0.25
+total = pris + moms
+
+print(total)
+
+pris = 200   # navnet peger nu på noget andet
+print(total) # men total blev regnet ud før omskrivning
+```
+
+:::
+
+::: {.aside}
+Værdierne ligger i RAM. Altså den hukommelse, vi kaldte "volatil"/midlertidig i lektion 1. Lukker I terminalen/editor, er de væk. Filen med koden overlever dog såfremt i gemmer den løbende; det, koden regnede ud, gør ikke.
+:::
+
+## Typer
+
+Hver værdi har en **type**. Typen bestemmer, hvad man må gøre med værdien.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+a = 42
+b = 3.5
+c = "42"
+d = True
+
+print(type(a), type(b), type(c), type(d))
+
+print(a + 8)      # tal plus tal
+print(c + "8")    # tekst plus tekst lægger dem i forlængelse
+print(int(c) + 8) # først når vi oversætter, kan vi regne
+```
+
+:::
+
+::: {.aside}
+`42` og `"42"` ser ens ud for jer og er to helt forskellige ting for Python. Det er den hyppigste fejlkilde, når data læses ind ... og en I helt sikkert kommer til at møde.
+:::
+
+## Funktioner
+
+En **funktion** tager noget ind, gør noget ved det, og giver noget tilbage. I har allerede brugt fire: `print()`, `type()`, `int()`, `ord()`.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+tal = [4, 8, 15, 16, 23, 42]
+
+print(len(tal))                      # antal elementer
+print(sum(tal))                      # summen
+print(max(tal))                      # største værdi
+print(round(sum(tal) / len(tal), 2)) # gennemsnit, afrundet
+```
+
+:::
+
+## Jeres egne funktioner 
+
+Med `def` lærer I maskinen en ny kommando. Et argument kan have en **standardværdi**, så I kun behøver angive det, når I vil have noget andet.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+def beskriv(vaerdier, navn="Datasæt"):
+    print(navn, "har", len(vaerdier), "værdier")
+    print("Gennemsnit:", sum(vaerdier) / len(vaerdier))
+
+tal = [4, 8, 15, 16, 23, 42]
+
+beskriv(tal)                  # bruger standardnavnet
+beskriv(tal, navn="Salgstal") # angiver navnet selv
+```
+
+:::
+
+::: {.aside}
+`print` skriver noget på skærmen til et menneske. `return` giver en værdi tilbage til koden, så den kan bruges videre. Forskellen bliver vigtig i nogle af øvelserne.
+:::
+
+## `print` eller `return`?
+
+De to funktioner regner det **samme** ud. Men kun den ene giver svaret tilbage, så koden kan bruge det videre.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+def beskriv(vaerdier):
+    print("Gennemsnit:", sum(vaerdier) / len(vaerdier))
+
+def gennemsnit(vaerdier):
+    return sum(vaerdier) / len(vaerdier)
+
+tal = [4, 8, 15, 16, 23, 42]
+
+svar = beskriv(tal)         # skriver på skærmen ...
+print("beskriv gav:", svar) # ... men gav ingenting tilbage
+
+print(gennemsnit(tal))           # her kommer værdien tilbage
+print(round(gennemsnit(tal), 1)) # så den kan sendes videre
+print(gennemsnit(tal) > 15)      # eller sammenlignes
+```
+
+:::
+
+::: {.aside}
+En funktion uden `return` giver `None` tilbage. Det er ikke en fejl, men Pythons måde at sige "ingenting". Prøv at skrive `print(beskriv(tal) + 2)` og læs fejlbeskeden.
+:::
 
 ---
 
-![](resources/peppespizza 2.jpeg){fig-align="center" width=50%}
+### "Huskeregler"
 
+- `print` er til **mennesket foran skærmen**. Værdien er væk, så snart den er skrevet ud.
 
-:::{.incremental}
-- **Anonymous Video Analytics**: Køn, Aldersgruppe, Attention time, Smile.
-- Tesla's overvågning af gadebilledet. Hvorfor er det mere acceptabelt? 
+- `return` er til **koden**/maskinen. Værdien kommer tilbage og kan gemmes i en variabel, regnes videre på eller gives til en anden funktion.
+
+- En funktion stopper ved `return`. Linjer under bliver aldrig kørt.
+
+<br>
+
+::: {.aside}
+Tommelfingerregel: en funktion, der **regner noget ud**, skal returnere. En funktion, der **fortæller noget**, må gerne printe. Og de to bør sjældent være den samme funktion.
 :::
 
-## Privatliv (3)
+## Metoder
 
-:::{.incremental}
-- **Federated learning**: Google opfandt en måde at trænie modeller på vores mobiler, uden hjemsendelse af persondata; kun parametre. 
-- **Formålsglidning**: bedste eksempel er NSA 
-- Techgiganterne der ved meget om os er primært Amerikanske; resten er primært Kinesiske.
-:::
+En **metode** er en funktion, der hører til et bestemt objekt. I kalder den med et punktum: `objekt.metode()`.
 
-<span class="timer" data-time="300"></span>
+Forskellen ligger i, hvem der ejer handlingen. `len(tekst)` er en **funktion**, der får en tekst ind som input. `tekst.upper()` er en metode, som teksten selv "stiller til rådighed".
 
-## Rettigheder og ejerskab {background-image="resources/antiai.png" background-size="100%" background-position="center" background-repeat="no-repeat" background-opacity="0.3"}
+::: {.kode-split}
 
-:::{.incremental}
-- Hvad ejer vi egentlig, når vi først har lagt det på nettet?
-- Hvad vil det sige at noget er "kreativt"?
-- OpenAI 4. november 2022: *you own the generations you create with DALL-E* ([pkt. 5](https://help.openai.com/en/articles/6704941-dall-e-api-faq))
-  - **AI *er* kreative i en snæver defination af begrebet**. Men modeller er trænet på "dit" arbejde. 
-- Vi kan ikke lave plagiat kontrol på en AI model, men ...    
-  - **Bør vi vandmærke AI modeller?**   
-:::
+```{pyodide}
+#| autorun: false
+tekst = "  Udvikling af IT  "
 
-<span class="timer" data-time="300"></span>
-
-## Rettigheder {background-image="resources/crime.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
-
-**Correctional Offender Management Profiling for Alternative Sanctions** ([COMPAS](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing))
-
-> *It assesses not just risk but also nearly two dozen so-called “criminogenic needs” that relate to the major theories of criminality, including “criminal personality,” “social isolation,” “substance abuse” and “residence/stability.” Defendants are ranked low, medium or high risk in each category.*
-
-:::{.incremental}
-::: {style="font-size: 0.9em;"}
-- AI modeller er (typisk) udvikling af folk, der ikke er eksperter i **substansfeltet**. De er eksperter i AI og ML. 
-- Neurale netværk er for kompliceret til at vi i dag, som mennesker kan se, hvad det er maskinen "ser". 
-  - **Subsymbolsk viden**: Dataen mister sin betydning for mennesker.
-    - **Grænsetilfælde**: Det lange hale problem.  
-    - En ting er at et system virker, men hvis vi ikke ved *hvorfor* det virker, bør vi så tage det i brug .
-:::
-:::
-
-<span class="timer" data-time="300"></span>
-
-## Diskrimination og gennemsigtighed (1)
-
-![](resources/pic-discrimination.jpg){fig-align="center" width=50%}
-
-:::{.incremental}
-- Det er mennesker, der har adgang til hvilke kategorier en model har adgang til. (Sandsynligvis har afro- og/eller amerikaner, ikke været tilgængelig).
-:::
-
-## Diskrimination og gennemsigtighed (2) {background-image="resources/dis.png" background-size="70%" background-position="center" background-repeat="no-repeat" background-opacity="0.15"}
-
-[Amazon Scraps Secret AI Recruiting Engine that Showed Biases Against Women](https://www.ml.cmu.edu/news/news-archive/2016-2020/2018/october/amazon-scraps-secret-artificial-intelligence-recruiting-engine-that-showed-biases-against-women.html)
-
-:::{.incremental}
-  - Endte som en *mande-detector*: Vi henter data fra en verden hvor hvide mænd har haft en priviligeret position. 
-  - Er modellen sexistisk, hvis den kun har "kendt" en (data)verden, hvor strukturel sexisme eksisterer?
-  - Data kan ikke have bias. Data *er* bare. 
-  - **Gennemsigtighed eller regulering?**
-:::
-
-<span class="timer" data-time="300"></span>
-
-## Diskrimination og gennemsigtighed (3) {background-image="resources/kant.jpg" background-size="100%" background-position="center" background-repeat="no-repeat" background-opacity="0.3"}
-
-*Scrolling, autonomi og selvforstærkende mekanismer.*
-
-:::{.incremental}
-- Danner vi ønsker, eller bliver vi nudget til bestemte ønsker? 
-- **Anbefalingssystemer**: er det tilpasning eller manipulation?
-- Deep fakes (billede og lyd). Google vi ikke frigive **AudioLM**.
-    * Lyd og billede kan ikke skelnes fra originaler. 
-::: 
-
-
-## Overdreven optimisme?
-
-![](resources/turk.jpg){fig-align="center" width=50%}
-
-:::{.incremental}
-- [LaMDA](https://arstechnica.com/tech-policy/2022/07/google-fires-engineer-who-claimed-lamda-chatbot-is-a-sentient-person/) og maskiner med bevidsthed?
-:::
-
-
-## Hvad er vi villige til at acceptere i et digitalt samfund? 
-
-:::{.incremental}
-
-1. Har vi tænkt over hvad vi vil og ikke vil være med til?
-
-2. Opvejet fordele og ulemper ...
-    * Kan vi overhovedet tage stilling til disse spørgsmål på forhånd eller er vi nødt til at diskutere det løbende?
-
-3. Hvem beslutter hvad vi vil og ikke vil? Og hvad er deres motivation for at beslutte som de gør?
-    * ...Befolkningens ve og vel?   
-    * ...Personlig fortjeneste?    
-    * ...Magt?    
-
-4. Hvad er alternativet?
-    * Kan vi sige fra, hvad ville der ske og hvordan gør vi?    
+print(tekst.strip())            # fjerner mellemrum i hver ende
+print(tekst.strip().upper())    # metoder kan kædes sammen
+print(tekst.strip().split(" ")) # deler teksten op i en liste
+print(tekst.count("i"))         # tæller forekomster
+```
 
 :::
 
-Det vi kan sige er, at vi altid vil være på bagkant af teknologien. Vi skal derfor kunne forholde os kritisk til teknologi med kort varsel-
+::: {.aside}
+Hvilke metoder I har adgang til, afhænger af objektets type. En tekst kan noget andet end en liste. Det er derfor, `type()` er nyttig, når noget ikke virker.
+:::
 
-I den ideelle verden:
+## Lister
 
-:::{.incremental}
+En **liste** er flere værdier under ét navn. Den første plads har nummer 0.
 
-1. ... er der gennemsigtighed omkring beslutningsprocesser og aktørers roller
-2. ... er der plads til demokratisk proces
-3. ... er det bl.a. jer og jeres fagfæller, mere end nogen anden der skal være med til at finde svarene ...
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+salg = [8200, 12400, 9100, 15600, 7300]
+
+print(salg[0])   # den første
+print(salg[-1])  # den sidste
+print(salg[1:3]) # index/plads 1 og 2, ikke 3 ...
+
+print(len(salg), sum(salg), max(salg))
+
+salg.append(11000) # en metode, der ændrer listen
+print(salg)
+```
 
 :::
 
-# Grupperdannelse og præsentation af mini-projekter
-
-## Mini-projektet 
-
-*"Benspænd"*
-
-- I skal til sidst "sælge" jeres produkt og det skal derfor være et **positivt** og **optimistisk** pitch, der fokusere på, hvorfor de problemstillinger vi har diskuteret i dag **ikke** er et problem i jeres produkt. 
-
-*Pædagogisk tilgang*
-
-::: {.incremental}
-::: {style="font-size: 0.8em;"}
-- I lære med en anden case Python-principper, som i skal oversætte til jeres mini-projekt
-- Fælles grundstruktur for alle projekter: Alle projekterne kan opbygges med disse fælles komponenter. 
-  - **Undervisningscase**: *Fremmøderegistrering*
-  - Borgerhenvendelsessystem
-  - Ventelistehåndtering til sundhedsvæsenet
-  - Affaldshåndteringssystem
-  - Tilskudsberegner
-- Qua vores akive brug af AI i undervisningen kan i til de sidste workshops selvstændigt udvide jeres systemer baseret på jeres interesse. 
-
-:::
+::: {.aside}
+At den første plads hedder 0 er den enkeltting, der skaber flest fejl i starten ... det skal bare blive en vane.
 :::
 
+## Logiske værdier
+
+En **boolean** kan kun være `True` eller `False`. Sammenligninger giver booleans tilbage, og de er det, al filtrering af data bygger på.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+print(8200 > 10000)
+print(8200 < 10000)
+print("Hej" == "hej") # to lighedstegn spørger. Ét tildeler.
+print(8200 != 7300)
+```
+
+:::
+
+## Betingelser
+
+`if` spørger. Linjerne under rykkes fire mellemrum ind: det er sådan Python ser, **hvad der hører sammen**. Indrykningen er derfor ikke pynt, som det kan være i andre kodesprog.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+salg = 12400
+
+if salg > 10000:
+    print("Højt salg")
+elif salg > 5000:
+    print("Middel")
+else:
+    print("Lavt")
+```
+
+:::
+
+::: {.aside}
+Rækkefølgen betyder noget. Python tager den første betingelse, der passer, og springer resten over. Prøv at bytte om på de to første linjer og kør igen.
+:::
+
+## Loops (Løkker)
+
+En løkke gør det samme igen og igen. Det er på mange måder grunden til, at en computer kan noget, et menneske ikke kan.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+salg = [8200, 12400, 9100, 15600, 7300]
+
+total = 0               # skal stå FØR løkken
+for tal in salg:
+    total = total + tal # kører én gang pr. tal
+print("Total:", total)
+
+```
+
+:::
+
+::: {.aside}
+Flyt `total = 0` ind i løkken og kør igen. Svaret bliver 7300. Kan I forklare hvorfor?
+:::
+
+---
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+antal = 0
+for tal in salg:
+    if tal > 10000:
+        antal = antal + 1
+print("Over 10.000:", antal)
+
+```
+
+:::
+
+## `range()`
+
+Når I ikke løber gennem en liste, men gennem en række tal.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+for i in range(1, 6):
+    print(f"7 x {i} = {7 * i}")
+```
+
+:::
+
+`range(1, 6)` stopper **ved 5**, ikke ved 6. Det virker forkert, og skal igen bare blive en vane ...
+
+## Biblioteker
+
+Et **bibliotek** er færdige funktioner, andre har skrevet og delt. Python kan fx ikke selv tegne en graf, men det kan `matplotlib` fordi forfatterne hertil har udviklet funktioner til det formål.
+
+::: {.kode-split}
+
+```{pyodide}
+#| autorun: false
+import statistics
+import matplotlib.pyplot as plt
+
+salg = [8200, 12400, 9100, 15600, 7300]
+
+plt.bar(range(1, 6), salg)
+plt.ylabel("Salg (kr.)")
+plt.show()
+```
+
+:::
+
+::: {.aside}
+Et bibliotek **installeres** én gang med `pip install`, men **indlæses** hver gang med `import`. Her er de indlæst på forhånd. På jeres egen maskine skal I installere dem først — det kommer vi til.
+:::
+
+# Fejl 
+
+## Fejlbeskeder
+
+Det er den mest præcise hjælp, I får hele dagen. Den siger både **hvad** og **hvor**.
+
+- Læs **nedefra og op**. Den sidste linje siger, hvad der er galt.
+- Linjen over siger hvor: fil og linjenummer.
+- Ved en `SyntaxError`: kig også på linjen **før** den, Python peger på. En glemt parentes opdages først på næste linje.
+
+## De tre, I møder i dag
+
+| Beskeden | Det betyder |
+|---|---|
+| `SyntaxError: expected ':'` | Manglende kolon efter `if`, `for` eller `def` |
+| `IndentationError` | Linjerne under en `if` skal rykkes ind |
+| `NameError: name 'x' is not defined` | Stavefejl, eller linjen er ikke kørt endnu |
+
+<br>
+
+De øvrige står på arket om **fejlbeskeder**. 
+
+# I gang med øvelser
+
+## Opsamling
+
+- En **variabel** er et navn, der peger på en værdi. `=` er en ordre, ikke en ligning.
+
+- **Typen** bestemmer, hvad værdien er, og hvad man må gøre med den.
+
+- **Funktioner** tager input og giver output. I bruger andres og skriver jeres egne.
+
+- **Metoder** er funktioner, der hører til et objekt.
+
+- **Lister** samler flere værdier. Den første plads hedder 0.
+
+- **Booleans** er ja/nej-svar, og de driver enhver betingelse.
+
+- **Løkker** gentager. Det er dér, maskinen bliver til noget.
 
 
+## Sådan kommer I i gang
+
+1. Læg øvelsesfilerne fra Moodle ind i jeres mappe til kurset
+
+2. Åbn **VS Code**
+
+3. **Åbn mappen i VS Code**: `File` → `Open Folder…` → vælg `jere`
+
+4. Klik på `01-variable.ipynb` i listen til venstre
+
+5. Øverst til højre: **Select Kernel** → `Python Environments…` → den øverste på listen
+
+<br>
+
+::: {.aside}
+Trin 3 er det vigtige. Åbner I bare selve øvelsesfilen, leder Python et tilfældigt sted efter jeres ting. Trin 5 skal I som udgangspunkt kun gøre én gang, da VS Code husker valget til de næste notebooks.
+:::
+
+---
+
+### Sådan kører I en celle
+
+En notebook er ikke ét program, men en samling små stykker kode, I kører ét ad gangen.
+
+- `Shift + Enter` kører cellen og hopper videre til den næste
+
+- `Ctrl + Enter` (`⌘ + Enter`) kører cellen og bliver stående
+
+- Eller klik på **▷** ude til venstre for cellen
+
+<br>
+
+Tallet i `[ ]` til venstre er **rækkefølgen**, I har kørt cellerne i, ikke deres placering i dokumentet. `[7]` betyder: det her var det syvende stykke kode, I kørte.
+
+---
+
+### Tre ting at huske
+
+- **Rækkefølgen**. Springer I en celle over, findes dens variable ikke. Det er den hyppigste kilde til et `NameError` i en notebook.
+
+- **Det, I har slettet, er der stadig.** Sletter I en celle, bliver dens variable i hukommelsen. Koden kan altså virke hos jer og fejle hos alle andre.
+
+- **Gem med `Ctrl + S`** (`⌘ + S`). En prik i fanebladet betyder, at der er ugemte ændringer.
+
+---
+
+### Når noget er galt
+
+- **`NameError`**: I har sandsynligvis ikke kørt cellen over. Kør den, og prøv igen.
+
+- **Cellen kører bare og kører** (`[*]` står og blinker): I venter nok på et svar fra `input()`. Kig efter det lille skrivefelt **øverst** i vinduet.
+
+- **Alt opfører sig mærkeligt**: `Restart` og `Run All`. Det løser ofte overraskende meget.
+
+<br>
+
+::: {.aside}
+Finder VS Code ikke nogen kernel: `Ctrl + Shift + P` (`⌘ + Shift + P`), skriv *Python: Select Interpreter*, vælg den øverste, og prøv **Select Kernel** igen.
+:::
 

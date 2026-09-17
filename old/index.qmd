@@ -1,0 +1,295 @@
+---
+title: "(D)en digital verden – utopi eller dystopi?"
+subtitle: ""
+author: "Jeppe Fjeldgaard Qvist"
+date: today
+format: 
+  revealjs:
+    include-after-body: "resources/timer.html"
+    navigation-mode: linear
+    slide-number: c
+    show-slide-number: print
+    embed-resources: true
+    self-contained-math: true
+    smaller: true
+    scrollable: true
+    theme: default
+    include-in-header: 
+      - text: |
+          <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+          <style>
+          .reveal {
+            font-family: "Libre Baskerville", serif !important;
+          }
+          .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: "Libre Baskerville", serif !important;
+          }
+          </style>
+---
+
+## Dagens program {background-image="resources/samfund.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.3"}
+
+- Forelæsning  
+- Introduktion til workshops og mini-projekterne
+
+## Det digitale samfund {background-image="resources/samfund.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
+
+> Det, at flere og flere aspekter af vores liv og hverdag digitaliseres, stiller ikke kun store krav til de underliggende systemer, men rejser også mange fundamentale spørgsmål; såvel tekniske som etiske.
+
+---
+
+![](resources/pic-accident.jpg){fig-align="center" width=50%}
+
+---
+
+![](resources/pic-accident.jpg){fig-align="center" width=50%}
+
+Et **klassificeringsproblem** (*falsk positiv*).
+
+---
+
+![](resources/pic-accident.jpg){fig-align="center" width=50%}
+
+Et **klassificeringsproblem** (*falsk positiv*).
+
+> Hvem bærer skylden: Maskinen eller Rafaela, der var "andenpilot"?
+
+---
+
+![](resources/pic-accident.jpg){fig-align="center" width=50%}
+
+Et **klassificeringsproblem** (*falsk positiv*).
+
+> Al data, der ligger til grund for maskines klassificerings-evner bygger på data som mennesker har haft ansvaret for. Maskiner forholder sig ikke til andet end tal. 
+
+---
+
+![](resources/pic-accident.jpg){fig-align="center" width=50%}
+
+Et **klassificeringsproblem** (*falsk positiv*).
+
+> Derfor kan maskiner ikke være sexistiske eller racistiske. Men der eksisterer (stadig) systematisk sexisme og racisme og disse forhold vil være afspejlet i den data vi træner modeller på. 
+
+## *Dataindsamling* og *tabsfunktionen*: den menneskelige vinkel
+
+Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til et **skak-træk**) ligger der menneskebestemte afvejninger bag.
+
+:::{.incremental}
+* *Datatype og -omfang*: Ægte data eller ideel data (the unicorn)? 
+* *Definerede opgaver*: Maskiner besejrer os, fordi vi beder dem om det. Det er ikke en skjult *motivation* (Luda, Tay: "thinking about you"). 
+* *Tabsfunktionen*: målet vi bruger til at bestemme, hvor langt maskinen er fra at løse problemet. En grundlæggende menneskebestemt komponent. 
+:::
+
+## *Dataindsamling* og *tabsfunktionen*: den menneskelige vinkel
+
+Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til et **skak-træk**) ligger der menneskebestemte afvejninger bag.
+
+> *"Du har en befolkning, hvor 0,5 procent får en alvorlig sygdom, og træner en model til at identificere dem. Modellen opnår hurtigt en høj træfsikkerhed på 99,5 procent, men er ikke i stand til at identificere en eneste af de syge. Hvad er der sket?"* (fra Inga Strümke)
+
+<span class="timer" data-time="120"></span>
+
+## *Dataindsamling* og *tabsfunktionen*: den menneskelige vinkel
+
+Hver gang AI bruges til at træffe en beslutning (alt fra **klassifikation** til et **skak-træk**) ligger der menneskebestemte afvejninger bag.
+
+:::{.incremental}
+* Udviklere bestemmer hvornår en model er færdig. 
+    * alt fra simpel ML og *deep learning* handler grundlæggende "bare" om kontinuerlig tilpasning af parametre indtil fejlen er så lille som muligt. 
+    * **Universel approximation**: tilnærmelse af den sande funktion og fordeling.  
+    * Det meste af fremgangen indenfor AI er takket være **brute force** og *enorme mængde data*, snarer end vi har formået at putte mere "intellegens" ind i modeller. 
+:::
+
+## Skyggesiderne af det digital samfund {background-image="resources/bad-ai.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.2"}
+
+<br>
+
+**De klassiske:**
+
+- Datasikkerhed
+- Privatliv 
+- Rettigheder (og ejerskab)
+
+**De "nye":**
+
+- Diskrimination og gennemsigtighed
+- (Klima)
+- (Ubegrundet/overdreven optimisme?)
+
+## (Data)sikkerhed {background-image="resources/eu.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
+
+:::{.incremental}
+* **GDPR**: for lidt og for meget?
+    * Forskningsarbejde, der ikke må anvendes i praksis. 
+    * Production af personfølsom data ([2018 studie på Facebook data](https://doi.org/10.1073/pnas.1802331115))
+    * Antag at de store techvirksomheder ved *midst* lige så meget om dig, som du selv gør!
+    * Giver mere regulering mening, når vi ikke ved hvad der bliver muligt i morgen?
+::: 
+
+<span class="timer" data-time="300"></span>
+
+## Privatliv (1) {background-image="resources/privat.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
+
+:::{.incremental}
+- Stort set alt hvad vi gør med digitale værktøjer (*computer, telefon, tv, SoMe, kort, kreditkort, ...*) **generer data**. 
+  - I praksis er denne data ikke længere anonym. Når der er nok data, er det "nemt" at identificere personer. 
+  - **The privacy paradox**. 
+  - Det meste data er ikke *for* os, det er *om* os. 
+:::
+
+<span class="timer" data-time="300"></span>
+
+## Privatliv (2) 
+
+![](resources/peppespizza2.jpg){fig-align="center" width=10%}
+
+---
+
+![](resources/peppespizza 2.jpeg){fig-align="center" width=50%}
+
+
+:::{.incremental}
+- **Anonymous Video Analytics**: Køn, Aldersgruppe, Attention time, Smile.
+- Tesla's overvågning af gadebilledet. Hvorfor er det mere acceptabelt? 
+:::
+
+## Privatliv (3)
+
+:::{.incremental}
+- **Federated learning**: Google opfandt en måde at trænie modeller på vores mobiler, uden hjemsendelse af persondata; kun parametre. 
+- **Formålsglidning**: bedste eksempel er NSA 
+- Techgiganterne der ved meget om os er primært Amerikanske; resten er primært Kinesiske.
+:::
+
+<span class="timer" data-time="300"></span>
+
+## Rettigheder og ejerskab {background-image="resources/antiai.png" background-size="100%" background-position="center" background-repeat="no-repeat" background-opacity="0.3"}
+
+:::{.incremental}
+- Hvad ejer vi egentlig, når vi først har lagt det på nettet?
+- Hvad vil det sige at noget er "kreativt"?
+- OpenAI 4. november 2022: *you own the generations you create with DALL-E* ([pkt. 5](https://help.openai.com/en/articles/6704941-dall-e-api-faq))
+  - **AI *er* kreative i en snæver defination af begrebet**. Men modeller er trænet på "dit" arbejde. 
+- Vi kan ikke lave plagiat kontrol på en AI model, men ...    
+  - **Bør vi vandmærke AI modeller?**   
+:::
+
+<span class="timer" data-time="300"></span>
+
+## Rettigheder {background-image="resources/crime.png" background-size="50%" background-position="center" background-repeat="no-repeat" background-opacity="0.1"}
+
+**Correctional Offender Management Profiling for Alternative Sanctions** ([COMPAS](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing))
+
+> *It assesses not just risk but also nearly two dozen so-called “criminogenic needs” that relate to the major theories of criminality, including “criminal personality,” “social isolation,” “substance abuse” and “residence/stability.” Defendants are ranked low, medium or high risk in each category.*
+
+:::{.incremental}
+::: {style="font-size: 0.9em;"}
+- AI modeller er (typisk) udvikling af folk, der ikke er eksperter i **substansfeltet**. De er eksperter i AI og ML. 
+- Neurale netværk er for kompliceret til at vi i dag, som mennesker kan se, hvad det er maskinen "ser". 
+  - **Subsymbolsk viden**: Dataen mister sin betydning for mennesker.
+    - **Grænsetilfælde**: Det lange hale problem.  
+    - En ting er at et system virker, men hvis vi ikke ved *hvorfor* det virker, bør vi så tage det i brug .
+:::
+:::
+
+<span class="timer" data-time="300"></span>
+
+## Diskrimination og gennemsigtighed (1)
+
+![](resources/pic-discrimination.jpg){fig-align="center" width=50%}
+
+:::{.incremental}
+- Det er mennesker, der har adgang til hvilke kategorier en model har adgang til. (Sandsynligvis har afro- og/eller amerikaner, ikke været tilgængelig).
+:::
+
+## Diskrimination og gennemsigtighed (2) {background-image="resources/dis.png" background-size="70%" background-position="center" background-repeat="no-repeat" background-opacity="0.15"}
+
+[Amazon Scraps Secret AI Recruiting Engine that Showed Biases Against Women](https://www.ml.cmu.edu/news/news-archive/2016-2020/2018/october/amazon-scraps-secret-artificial-intelligence-recruiting-engine-that-showed-biases-against-women.html)
+
+:::{.incremental}
+  - Endte som en *mande-detector*: Vi henter data fra en verden hvor hvide mænd har haft en priviligeret position. 
+  - Er modellen sexistisk, hvis den kun har "kendt" en (data)verden, hvor strukturel sexisme eksisterer?
+  - Data kan ikke have bias. Data *er* bare. 
+  - **Gennemsigtighed eller regulering?**
+:::
+
+<span class="timer" data-time="300"></span>
+
+## Diskrimination og gennemsigtighed (3) {background-image="resources/kant.jpg" background-size="100%" background-position="center" background-repeat="no-repeat" background-opacity="0.3"}
+
+*Scrolling, autonomi og selvforstærkende mekanismer.*
+
+:::{.incremental}
+- Danner vi ønsker, eller bliver vi nudget til bestemte ønsker? 
+- **Anbefalingssystemer**: er det tilpasning eller manipulation?
+- Deep fakes (billede og lyd). Google vi ikke frigive **AudioLM**.
+    * Lyd og billede kan ikke skelnes fra originaler. 
+::: 
+
+
+## Overdreven optimisme?
+
+![](resources/turk.jpg){fig-align="center" width=50%}
+
+:::{.incremental}
+- [LaMDA](https://arstechnica.com/tech-policy/2022/07/google-fires-engineer-who-claimed-lamda-chatbot-is-a-sentient-person/) og maskiner med bevidsthed?
+:::
+
+
+## Hvad er vi villige til at acceptere i et digitalt samfund? 
+
+:::{.incremental}
+
+1. Har vi tænkt over hvad vi vil og ikke vil være med til?
+
+2. Opvejet fordele og ulemper ...
+    * Kan vi overhovedet tage stilling til disse spørgsmål på forhånd eller er vi nødt til at diskutere det løbende?
+
+3. Hvem beslutter hvad vi vil og ikke vil? Og hvad er deres motivation for at beslutte som de gør?
+    * ...Befolkningens ve og vel?   
+    * ...Personlig fortjeneste?    
+    * ...Magt?    
+
+4. Hvad er alternativet?
+    * Kan vi sige fra, hvad ville der ske og hvordan gør vi?    
+
+:::
+
+Det vi kan sige er, at vi altid vil være på bagkant af teknologien. Vi skal derfor kunne forholde os kritisk til teknologi med kort varsel-
+
+I den ideelle verden:
+
+:::{.incremental}
+
+1. ... er der gennemsigtighed omkring beslutningsprocesser og aktørers roller
+2. ... er der plads til demokratisk proces
+3. ... er det bl.a. jer og jeres fagfæller, mere end nogen anden der skal være med til at finde svarene ...
+
+:::
+
+# Grupperdannelse og præsentation af mini-projekter
+
+## Mini-projektet 
+
+*"Benspænd"*
+
+- I skal til sidst "sælge" jeres produkt og det skal derfor være et **positivt** og **optimistisk** pitch, der fokusere på, hvorfor de problemstillinger vi har diskuteret i dag **ikke** er et problem i jeres produkt. 
+
+*Pædagogisk tilgang*
+
+::: {.incremental}
+::: {style="font-size: 0.8em;"}
+- I lære med en anden case Python-principper, som i skal oversætte til jeres mini-projekt
+- Fælles grundstruktur for alle projekter: Alle projekterne kan opbygges med disse fælles komponenter. 
+  - **Undervisningscase**: *Fremmøderegistrering*
+  - Borgerhenvendelsessystem
+  - Ventelistehåndtering til sundhedsvæsenet
+  - Affaldshåndteringssystem
+  - Tilskudsberegner
+- Qua vores akive brug af AI i undervisningen kan i til de sidste workshops selvstændigt udvide jeres systemer baseret på jeres interesse. 
+
+:::
+:::
+
+
+
+
