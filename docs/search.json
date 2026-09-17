@@ -298,7 +298,7 @@
     "href": "index.html#sådan-kommer-i-i-gang",
     "title": "Lektion 2",
     "section": "Sådan kommer I i gang",
-    "text": "Sådan kommer I i gang\n\nÅbn VS Code\nLæg øvelsesfilerne fra Moodle ind i jeres mappe til kurset\nÅbn mappen i VS Code: File → Open Folder… → vælg 1-bid\nKlik på 01-variable.ipynb i listen til venstre\nØverst til højre: Select Kernel → Python Environments… → den øverste på listen\n\n\n\n\nTrin 3 er det vigtige. Åbner I bare selve øvelsesfilen, leder Python et tilfældigt sted efter jeres ting. Trin 5 skal I kun gøre én gang — VS Code husker valget til de næste notebooks."
+    "text": "Sådan kommer I i gang\n\nLæg øvelsesfilerne fra Moodle ind i jeres mappe til kurset\nÅbn VS Code\nÅbn mappen i VS Code: File → Open Folder… → vælg jere\nKlik på 01-variable.ipynb i listen til venstre\nØverst til højre: Select Kernel → Python Environments… → den øverste på listen\n\n\n\n\nTrin 3 er det vigtige. Åbner I bare selve øvelsesfilen, leder Python et tilfældigt sted efter jeres ting. Trin 5 skal I som udgangspunkt kun gøre én gang, da VS Code husker valget til de næste notebooks."
   },
   {
     "objectID": "index.html#print-eller-return",

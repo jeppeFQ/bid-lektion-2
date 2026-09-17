@@ -225,13 +225,12 @@ mkdir -p .qmd-pause && mv *.qmd .qmd-pause/ && \
 <section id="dagens-program" class="slide level2 scrollable">
 <h2>Dagens program</h2>
 <ol type="1">
-<li class="fragment"><p><strong>Det centrale om Python fra sidste gang</strong></p></li>
-<li class="fragment"><p><strong>Sådan taler I med Python</strong>: filen, terminalen og <code>print()</code></p></li>
-<li class="fragment"><p><strong>Fundamentale koncepter</strong>: variable, typer, funktioner, metoder, lister, betingelser og loops/lækker</p></li>
-<li class="fragment"><p><strong>Fejl og fejlbeskeder</strong></p></li>
-<li class="fragment"><p><strong>Øvelser</strong>: I koder selv</p></li>
+<li><p><strong>Det centrale om Python fra sidste gang</strong></p></li>
+<li><p><strong>Sådan taler I med Python</strong>: filen, terminalen og <code>print()</code></p></li>
+<li><p><strong>Fundamentale koncepter</strong>: variable, typer, funktioner, metoder, lister, betingelser og loops/lækker</p></li>
+<li><p><strong>Fejl og fejlbeskeder</strong></p></li>
+<li><p><strong>Øvelser</strong>: I koder selv</p></li>
 </ol>
-<p><br></p>
 </section>
 <section>
 <section id="fire-ting-fra-sidste-gang" class="title-slide slide level1 center">
@@ -670,49 +669,45 @@ eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlfSwiY29kZSI6Imlt
 <section id="sådan-kommer-i-i-gang" class="slide level2 scrollable">
 <h2>Sådan kommer I i gang</h2>
 <ol type="1">
-<li><p>Åbn <strong>VS Code</strong></p></li>
 <li><p>Læg øvelsesfilerne fra Moodle ind i jeres mappe til kurset</p></li>
-<li><p><strong>Åbn mappen i VS Code</strong>: <code>File</code> → <code>Open Folder…</code> → vælg <code>1-bid</code></p></li>
+<li><p>Åbn <strong>VS Code</strong></p></li>
+<li><p><strong>Åbn mappen i VS Code</strong>: <code>File</code> → <code>Open Folder…</code> → vælg <code>jere</code></p></li>
 <li><p>Klik på <code>01-variable.ipynb</code> i listen til venstre</p></li>
 <li><p>Øverst til højre: <strong>Select Kernel</strong> → <code>Python Environments…</code> → den øverste på listen</p></li>
 </ol>
 <p><br></p>
 
 <aside><div>
-<p>Trin 3 er det vigtige. Åbner I bare selve øvelsesfilen, leder Python et tilfældigt sted efter jeres ting. Trin 5 skal I kun gøre én gang — VS Code husker valget til de næste notebooks.</p>
+<p>Trin 3 er det vigtige. Åbner I bare selve øvelsesfilen, leder Python et tilfældigt sted efter jeres ting. Trin 5 skal I som udgangspunkt kun gøre én gang, da VS Code husker valget til de næste notebooks.</p>
 </div></aside></section>
 <section class="slide level2">
 
 <h3 id="sådan-kører-i-en-celle">Sådan kører I en celle</h3>
-<p>En notebook er ikke ét program, men en stak små stykker kode, I kører ét ad gangen.</p>
+<p>En notebook er ikke ét program, men en samling små stykker kode, I kører ét ad gangen.</p>
 <ul>
 <li><p><code>Shift + Enter</code> kører cellen og hopper videre til den næste</p></li>
 <li><p><code>Ctrl + Enter</code> (<code>⌘ + Enter</code>) kører cellen og bliver stående</p></li>
 <li><p>Eller klik på <strong>▷</strong> ude til venstre for cellen</p></li>
 </ul>
 <p><br></p>
-<p>Tallet i <code>[ ]</code> til venstre er <strong>rækkefølgen</strong>, I har kørt cellerne i — ikke deres placering i dokumentet. <code>[7]</code> betyder: det her var det syvende, I kørte.</p>
+<p>Tallet i <code>[ ]</code> til venstre er <strong>rækkefølgen</strong>, I har kørt cellerne i, ikke deres placering i dokumentet. <code>[7]</code> betyder: det her var det syvende stykke kode, I kørte.</p>
 </section>
 <section class="slide level2">
 
 <h3 id="tre-ting-at-huske">Tre ting at huske</h3>
 <ul>
-<li class="fragment"><p><strong>Rækkefølgen er jeres</strong>, ikke dokumentets. Springer I en celle over, findes dens variable ikke. Det er den hyppigste kilde til et <code>NameError</code> i en notebook.</p></li>
-<li class="fragment"><p><strong>Det, I har slettet, er der stadig.</strong> Sletter I en celle, bliver dens variable i hukommelsen. Koden kan altså virke hos jer og fejle hos alle andre.</p></li>
-<li class="fragment"><p><strong>Gem med <code>Ctrl + S</code></strong> (<code>⌘ + S</code>). En prik i fanebladet betyder, at der er ugemte ændringer.</p></li>
+<li><p><strong>Rækkefølgen</strong>. Springer I en celle over, findes dens variable ikke. Det er den hyppigste kilde til et <code>NameError</code> i en notebook.</p></li>
+<li><p><strong>Det, I har slettet, er der stadig.</strong> Sletter I en celle, bliver dens variable i hukommelsen. Koden kan altså virke hos jer og fejle hos alle andre.</p></li>
+<li><p><strong>Gem med <code>Ctrl + S</code></strong> (<code>⌘ + S</code>). En prik i fanebladet betyder, at der er ugemte ændringer.</p></li>
 </ul>
-<p><br></p>
-<div class="fragment">
-<p>Derfor: når I mener, en øvelse er færdig, så tryk <strong>Restart</strong> og derefter <strong>Run All</strong>. Kører den hele vejen igennem oppefra og ned, virker den. Gør den ikke, var det hukommelsen, der holdt den i live.</p>
-</div>
 </section>
 <section class="slide level2">
 
 <h3 id="når-noget-er-galt">Når noget er galt</h3>
 <ul>
-<li><p><strong><code>NameError</code></strong> — I har sandsynligvis ikke kørt cellen over. Kør den, og prøv igen.</p></li>
-<li><p><strong>Cellen kører bare og kører</strong> (<code>[*]</code> står og blinker) — I venter nok på et svar fra <code>input()</code>. Kig efter det lille skrivefelt <strong>øverst</strong> i vinduet.</p></li>
-<li><p><strong>Alt opfører sig mærkeligt</strong> — <code>Restart</code> og <code>Run All</code>. Det løser overraskende meget.</p></li>
+<li><p><strong><code>NameError</code></strong>: I har sandsynligvis ikke kørt cellen over. Kør den, og prøv igen.</p></li>
+<li><p><strong>Cellen kører bare og kører</strong> (<code>[*]</code> står og blinker): I venter nok på et svar fra <code>input()</code>. Kig efter det lille skrivefelt <strong>øverst</strong> i vinduet.</p></li>
+<li><p><strong>Alt opfører sig mærkeligt</strong>: <code>Restart</code> og <code>Run All</code>. Det løser ofte overraskende meget.</p></li>
 </ul>
 <p><br></p>
 

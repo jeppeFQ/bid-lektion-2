@@ -31,8 +31,6 @@ mkdir -p .qmd-pause && mv *.qmd .qmd-pause/ && \
 
 ## Dagens program
 
-::: {.incremental}
-
 1. **Det centrale om Python fra sidste gang** 
 
 2. **Sådan taler I med Python**: filen, terminalen og `print()`
@@ -42,10 +40,6 @@ mkdir -p .qmd-pause && mv *.qmd .qmd-pause/ && \
 4. **Fejl og fejlbeskeder**
 
 5. **Øvelser**: I koder selv
-
-:::
-
-<br>
 
 # Fire ting fra sidste gang
 
